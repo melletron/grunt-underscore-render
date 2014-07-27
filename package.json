@@ -14,7 +14,10 @@
         "_",
         "underscore"
     ],
-    "author": "Melle Hofman",
+    "author": {
+        "name": "Melle Hofman",
+        "email": "mel@capone.nl"
+    },
     "license": "MIT",
     "devDependencies": {
         "underscore": "~1.6.0",

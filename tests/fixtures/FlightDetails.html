@@ -1,0 +1,41 @@
+<!--data-underscore-->
+<p>
+    <strong><%=data.outboundRoute%></strong> <a data-href="#show-details-outbound"><%=messages.getString('babs.init.details', 'Details')%> <i class="icon-chevron-down open"></i><i class="icon-chevron-up close"></i></a>
+    <br />
+<span class="details" data-target="#show-details-outbound">
+    <span data-include="segments-outbound"></span>
+</span>
+<span data-target="#show-details-outbound">
+<span class="grey"><%=messages.getString('babs.productdisplay.text_product_display_general_depart', 'Depart')%>:</span> <%=data.departDateOutBound%><br/>
+<span class="grey"><%=messages.getString('babs.productdisplay.text_product_display_general_arrival', 'Arrival')%>:</span> <%=data.arrivalDateOutBound%><br/>
+</span>
+</p>
+
+<% if(data.isReturnFlight) { %>
+<p>
+    <strong><%=data.inboundRoute%></strong> <a data-href="#show-details-inbound"><%=messages.getString('babs.init.details', 'Details')%> <i class="icon-chevron-down open"></i><i class="icon-chevron-up close"></i></a>
+    <br />
+<span class="details" data-target="#show-details-inbound">
+    <span data-include="segments-inbound"></span>
+</span>
+<span data-target="#show-details-inbound">
+<span class="grey"><%=messages.getString('babs.productdisplay.text_product_display_general_depart', 'Depart')%>:</span> <%=data.departDateInBound%><br/>
+<span class="grey"><%=messages.getString('babs.productdisplay.text_product_display_general_arrival', 'Arrival')%>:</span> <%=data.arrivalDateInBound%><br/>
+</span>
+</p>
+<% } %>
+
+<p>
+    <strong><%=data.numPassengers%> <%=messages.getString('babs.init.passengers', 'passengers')%></strong> <a data-href="#show-details-flight"><%=messages.getString('babs.init.flights_show', 'Show')%> <i class="icon-chevron-down open"></i><i class="icon-chevron-up close"></i></a>
+    <br />
+<span class="details" data-target="#show-details-flight">
+<% _.each(data.passengerDetails, function (passenger) { %>
+        <%=passenger.title%> <%=passenger.firstName%> <%=passenger.lastName%><br/>
+<% }); %>
+<%=messages.getString('babs.init.checked_baggage', 'Checked baggage')%> x<%=data.baggageCount %><br />
+<% if(data.carbonNeutral) { %>
+<%=messages.getString('babs.init.carbon_offset', 'Carbon offset')%><br/>
+<% } %>
+</span>
+</p>
+<!--/data-underscore-->

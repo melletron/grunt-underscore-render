@@ -1,0 +1,56 @@
+<!--data-underscore-->
+<ul class="list-unstyled">
+    <li>
+        <strong><%=data.hotelName%></strong>
+        <% if (data.topSecret) { %> <br/>
+        <%=data.topSecret%>
+        <br/> <% } %>
+        <!--<span class="visible-xs"><%=data.hotelPrice%></span></li>-->
+    <li class="hidden-xs" data-toggle="#full-details-and-cancellation-policy">
+        <i class="icon-star <%=data.onestar%>"></i>
+        <i class="icon-star <%=data.twostars%>"></i>
+        <i class="icon-star <%=data.threestars%>"></i>
+        <i class="icon-star <%=data.fourstars%>"></i>
+        <i class="icon-star <%=data.fivestars%>"></i>
+    </li>
+</ul>
+
+<p class="hidden-xs" data-toggle="#full-details-and-cancellation-policy"><%=data.hotelAddress%></p>
+
+<ul class="list-unstyled">
+    <li><span><%=messages.getString('babs.productdisplay.text_product_display_general_checkin')%>:</span> <%=data.checkInDate%></li>
+    <li><span><%=messages.getString('babs.productdisplay.text_product_display_general_checkout')%>:</span> <%=data.checkOutDate%></li>
+</ul>
+
+<ul class="list-unstyled hidden-xs" data-toggle="#full-details-and-cancellation-policy">
+    <li><strong><%=data.numberOfRooms%>, <%=data.totalGuests%> <%=messages.getString('babs.productdisplay.text_guests','guests')%></strong></li>
+    <li><%=data.roomDescriptions%></li>
+</ul>
+
+
+
+<% if (data.cancellationPolicy) { %>
+<ul class="list-unstyled hidden-xs" data-toggle="#full-details-and-cancellation-policy">
+    <li><a data-href="#cancellation-policy"><%=messages.getString('babs.productdisplay.text_cancellation_policy','Cancellation policy')%> <i class="icon-chevron-down open"></i><i class="icon-chevron-up close"></i></a></li>
+</ul>
+<p class="cancellationPolicy" data-toggle="#full-details-and-cancellation-policy"><%=data.cancellationPolicy%></p>
+<% } %>
+
+<ul class="list-unstyled visible-xs" data-toggle="#full-details-and-cancellation-policy">
+    <li><a data-href="#full-details-and-cancellation-policy"><%=messages.getString('babs.productdisplay.text_full_details_cancellation_policy','Full details and cancellation policy')%></a></li>
+</ul>
+
+<% if (!data.hidePrice) { %>
+
+<ul class="list-unstyled hidden-xs">
+    <li><%=messages.getString('babs.productdisplay.text_product_display_general_total_amount_payable', 'Total amount payable')%>
+    </li>
+    <li><strong><%=data.hotelPrice%></strong></li>
+</ul>
+
+<% } %>
+
+<hr class="hidden-xs"/>
+
+
+<!--/data-underscore-->

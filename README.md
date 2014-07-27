@@ -33,9 +33,9 @@ options: {
 
 ### Example template
 ```html
-<!--data-underscore-->;
+<!--data-underscore-->
 <h1><%=hello%></h1>;
-<!--/data-underscore-->;
+<!--/data-underscore-->
 ```
 
 All between the HTML comments &lt;!--data-underscore--&gt; and &lt;!--/data-underscore--&gt; is being used to render the underscore template.

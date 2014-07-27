@@ -34,7 +34,7 @@ options: {
 ### Example template
 ```html
 <!--data-underscore-->
-<h1><%=hello%></h1>;
+<h1><%=hello%></h1>
 <!--/data-underscore-->
 ```
 

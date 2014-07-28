@@ -1,6 +1,6 @@
 {
     "name": "grunt-underscore-render",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Renders underscore templates into JavaScript functions. You can then store these on the CDN.",
     "repository": {
         "type": "git",

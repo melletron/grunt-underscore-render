@@ -1,4 +1,4 @@
-window.templates=window.templates||{};window.templates.flightDetails=function(obj){
+window.templates=window.templates||{};window.templates['flightDetails']=function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
 __p+='\n<p>\n    <strong>'+
@@ -58,7 +58,7 @@ __p+='\n'+
 __p+='\n</span>\n</p>\n';
 }
 return __p;
-};window.templates.hotelDetails=function(obj){
+};window.templates['hotelDetails']=function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
 __p+='\n<ul class="list-unstyled">\n    <li>\n        <strong>'+

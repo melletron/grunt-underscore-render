@@ -17,7 +17,7 @@ module.exports = function gruntTask(grunt) {
             var underscoreTemplate = grunt.file.read(path);
             grunt.log.writeln("template " + name + " appended");
             var tpl = underscoreTemplate.match(/<!--data-underscore-->([^]*)<!--\/data-underscore-->/)[1];
-            return 'window.' + config.globalName + '.' + name + '=' + _.template(tpl).source + ';'
+            return 'window.' + config.globalName + '[\'' + name + '\']=' + _.template(tpl).source + ';'
         };
 
         templateSource += 'window.' + config.globalName + '=window.' + config.globalName + '||{};';
